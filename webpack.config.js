@@ -1,12 +1,12 @@
 const { resolve } = require("path");
 const { optimize } = require("webpack");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+// const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
 	entry: "./src/briefly.js",
 	output: {
 		path: resolve(__dirname, "dist"),
-		filename: "briefly.min.js"
+		filename: "briefly.min.js",
 	},
 	module: {
 		loaders: [
@@ -14,14 +14,14 @@ module.exports = {
 				test: /\.js$/,
 				loader: "babel-loader",
 				query: {
-					presets: ["es2015"]
-				}
-			}
-		]
+					presets: ["env"],
+				},
+			},
+		],
 	},
 	stats: {
-		colors: true
+		colors: true,
 	},
 	plugins: [new optimize.UglifyJsPlugin()],
-	devtool: "source-map"
+	devtool: "source-map",
 };

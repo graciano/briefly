@@ -61,7 +61,7 @@ export function hhmmddmm(date) {
 	let month = (d.getMonth() + 1).toString();
 
 	return `${leadZeroes(hour)}:${leadZeroes(minutes)} ${leadZeroes(
-		day
+		day,
 	)}/${leadZeroes(month)}`;
 }
 
@@ -82,6 +82,6 @@ export function weekDayFull(date, lang) {
 		const weekDays = require(`./langs/${lang}`);
 		return weekDays[new Date(date).getDay()];
 	} catch (err) {
-		throw new Error("Cannot find current language selected.");
+		throw new Error(`Cannot find ${lang} lang.`);
 	}
 }
