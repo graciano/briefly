@@ -78,10 +78,10 @@ export function hhmmss(date) {
 
 // Return weekdays text - Ex: sunday/dimanche/domingo
 export function weekDayFull(date, lang) {
-	try {
-		const weekDays = require(`./langs/${lang}`);
-		return weekDays[new Date(date).getDay()];
-	} catch (err) {
-		throw new Error(`Cannot find ${lang} lang.`);
-	}
+	// try {
+	const weekDays = require(`./langs/${lang}`);
+	return weekDays[new Date(date).getDay()];
+	// } catch (err) {
+	// 	throw new Error(`Cannot find ${lang} lang.`);
+	// }
 }

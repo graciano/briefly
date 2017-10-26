@@ -1,4 +1,4 @@
-const { ddmmyyISO } = require("./dist/briefly.min.js");
+const { ddmmyyISO } = require("./dist/briefly.min");
 
 console.log(ddmmyyISO);
 
