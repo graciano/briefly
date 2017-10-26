@@ -89,6 +89,7 @@ describe("Briefly", () => {
 			expect(B.weekDayFull(originalDate, "en")).toEqual("sunday");
 			expect(B.weekDayFull(originalDate, "fr")).toEqual("dimanche");
 			expect(B.weekDayFull(originalDate, "pt-br")).toEqual("domingo");
+			expect(B.weekDayFull(originalDate, "sv")).toEqual("söndag");
 		});
 	});
 });
