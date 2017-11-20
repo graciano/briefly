@@ -5,6 +5,7 @@
   "main": "/dist/briefly.min.js",
   "author": "pgsil",
   "license": "MIT",
+  "keywords": ["date", "time", "formatting"],
   "dependencies": {
     "babel-cli": "^6.26.0"
   },
